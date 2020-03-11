@@ -79,7 +79,7 @@ app.post("/login", (req, res) => {
   // console.log("----------------");
 	// console.log("*login_user PSOT2*");
   // console.log(req.body);
-  // console.log("----------------");
+
 
 	db.each("SELECT COUNT(*) AS total FROM users WHERE (email, password) = (?,?)",
   req.body.email,req.body.password,(err, row) => {
